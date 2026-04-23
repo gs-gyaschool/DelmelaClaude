@@ -150,13 +150,13 @@ From our signature waffles and shakshuka to rice bowls, wraps, and homemade past
   ],
 
   theme: {
-    primary:   "#7A5A42",
-    secondary: "#D2A57A",
-    accent:    "#F2B37A",
-    dark:      "#2a1e14",
-    cream:     "#FBF6F0",
-    text:      "#333333",
-    muted:     "#6B6B6B",
-    border:    "#E7D9CC",
-  },
+  primary:   "#8A6A52",
+  secondary: "#E0B890",
+  accent:    "#F4C28A",
+  dark:      "#2a1e14",
+  cream:     "#FDF9F4",
+  text:      "#3A3A3A",
+  muted:     "#7A7A7A",
+  border:    "#EFE3D6",
+},
 };
