@@ -49,7 +49,7 @@ From our signature waffles and shakshuka to rice bowls, wraps, and homemade past
     {
       category: "Breakfast",
       description: "Waffles, pancakes, eggs & Ethiopian classics to start your day",
-      cover: "images/menu-breakfast.png",
+      cover: "images/menu-breakfast.jpg",
       gradient: "linear-gradient(135deg, #7a4a1e 0%, #c47c3a 100%)",
       items: [
         { name: "Egg & Waffle",                     description: "A classic done right" },
@@ -72,7 +72,7 @@ From our signature waffles and shakshuka to rice bowls, wraps, and homemade past
     {
       category: "Salads",
       description: "Fresh, filling salads with chickpeas, egg and protein options",
-      cover: "images/menu-salads.png",
+      cover: "images/menu-salads.jpg",
       gradient: "linear-gradient(135deg, #2a4a2e 0%, #4a8a52 100%)",
       items: [
         { name: "House Salad",         description: "Chickpeas, egg, vegetable mix" },
@@ -84,7 +84,7 @@ From our signature waffles and shakshuka to rice bowls, wraps, and homemade past
     {
       category: "Rice Bowls",
       description: "Hearty bowls inspired by global flavours",
-      cover: "images/menu-bowls.png",
+      cover: "images/menu-bowls.jpg",
       gradient: "linear-gradient(135deg, #4a2a10 0%, #8a5a30 100%)",
       items: [
         { name: "Tika Tika Bowl",        description: "Chicken curry rice bowl" },
@@ -98,7 +98,7 @@ From our signature waffles and shakshuka to rice bowls, wraps, and homemade past
     {
       category: "Sandwiches & Wraps",
       description: "Signature builds and classic combos, your way",
-      cover: "images/menu-sandwiches.png",
+      cover: "images/menu-sandwiches.jpg",
       gradient: "linear-gradient(135deg, #3a2a18 0%, #7a5a38 100%)",
       items: [
         { name: "Signature Delmela Sandwich", description: "Our house special — a must-try" },
@@ -115,7 +115,7 @@ From our signature waffles and shakshuka to rice bowls, wraps, and homemade past
     {
       category: "Desserts & Pastries",
       description: "Waffles, cinnamon rolls, croissants and more",
-      cover: "images/menu-desserts.png",
+      cover: "images/menu-desserts.jpg",
       gradient: "linear-gradient(135deg, #5a2a3a 0%, #b06070 100%)",
       items: [
         { name: "Chocolate Waffle",         description: "Rich, indulgent, warm" },
@@ -131,7 +131,7 @@ From our signature waffles and shakshuka to rice bowls, wraps, and homemade past
     {
       category: "Drinks",
       description: "Coffee, fresh juices, smoothies, shakes and more",
-      cover: "images/menu-drinks.png",
+      cover: "images/menu-drinks.jpg",
       gradient: "linear-gradient(135deg, #1a0e08 0%, #4a2e1a 100%)",
       items: [
         { name: "Latte",        description: "Smooth espresso with steamed milk" },
