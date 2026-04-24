@@ -442,8 +442,8 @@ footer a { color: var(--accent); }
 .menu-cover-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;          /* fills width fully on desktop */
-  object-position: center top; /* keep top of food in frame */
+  object-fit: cover;
+  object-position: center center;  /* show the food subject (middle of image) */
   display: block;
   transition: transform 0.45s ease;
 }
@@ -466,8 +466,8 @@ footer a { color: var(--accent); }
 }
 .panel-count { font-size: 0.75rem; color: var(--muted); }
 
-/* Panel flush with cover on top */
-.menu-panel { border-radius: 0 0 var(--radius) var(--radius); }
+/* Panel full radius on desktop (cover is narrower), flush on mobile */
+.menu-panel { border-radius: var(--radius); }
 
 /* ---- Google Maps embed ---- */
 .location-map-wrap {
@@ -590,6 +590,9 @@ footer a { color: var(--accent); }
     object-fit: contain;      /* full image, no crop on mobile */
     object-position: center;
   }
+
+  /* Panel flush with cover on mobile */
+  .menu-panel { border-radius: 0 0 var(--radius) var(--radius); }
 
   /* Show nav arrows on cover */
   .menu-nav-arrows { display: flex; }
