@@ -29,7 +29,25 @@ document.addEventListener('DOMContentLoaded', () => {
   buildContact();
 
   const nav = document.querySelector('nav');
-  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
+  let lastScrollY = window.scrollY;
+  let scrollTicking = false;
+  window.addEventListener('scroll', () => {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      // Add 'scrolled' style once past 50px
+      nav.classList.toggle('scrolled', y > 50);
+      // Auto-hide: hide when scrolling down past 120px, show when scrolling up
+      if (y > 120 && y > lastScrollY) {
+        nav.classList.add('nav-hidden');
+      } else {
+        nav.classList.remove('nav-hidden');
+      }
+      lastScrollY = y;
+      scrollTicking = false;
+    });
+  });
 
   document.getElementById('hamburger').addEventListener('click', () =>
     document.getElementById('mobile-menu').classList.add('open'));
@@ -87,24 +105,6 @@ function buildMenu() {
   const nextBtn = document.getElementById('arrow-next');
   prevBtn.addEventListener('click', () => switchTab(Math.max(0, currentIndex - 1)));
   nextBtn.addEventListener('click', () => switchTab(Math.min(total - 1, currentIndex + 1)));
-
-  // Touch swipe on menu panel
-  const panel = document.getElementById('menu-panel');
-  let touchStartX = 0;
-  let touchStartY = 0;
-  panel.addEventListener('touchstart', e => {
-    touchStartX = e.touches[0].clientX;
-    touchStartY = e.touches[0].clientY;
-  }, { passive: true });
-  panel.addEventListener('touchend', e => {
-    const dx = e.changedTouches[0].clientX - touchStartX;
-    const dy = e.changedTouches[0].clientY - touchStartY;
-    // Only trigger if horizontal swipe is dominant and long enough
-    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
-      if (dx < 0) switchTab(Math.min(total - 1, currentIndex + 1)); // swipe left → next
-      else         switchTab(Math.max(0, currentIndex - 1));          // swipe right → prev
-    }
-  }, { passive: true });
 
   renderItems(0);
 }
